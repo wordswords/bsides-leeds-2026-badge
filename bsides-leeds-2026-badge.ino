@@ -1350,8 +1350,13 @@ void handleWakeButtonPress(
 }
 
 void ptc_event_callback(uint8_t event, uint8_t node, uint8_t data) {
-    // Implement touch event handling logic here
-    // For now, this is a placeholder implementation
+    // Basic implementation for touch event handling
+    // This can be expanded based on specific requirements
+    if (event == PTC_EVENT_TOUCH) {
+        // Handle touch event
+    } else if (event == PTC_EVENT_RELEASE) {
+        // Handle release event
+    }
 }
 
 void setup() {
