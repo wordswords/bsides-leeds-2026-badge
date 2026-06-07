@@ -1350,7 +1350,9 @@ void handleWakeButtonPress(
   totalIntervalMs = 0;
 }
 
-void setup()
+void ptc_event_callback(uint8_t event, uint8_t node, uint8_t data) {
+    // Placeholder for touch event handling
+}
 {
   pinMode(PIN_PA1, OUTPUT);
   pinMode(PIN_PA2, OUTPUT);
