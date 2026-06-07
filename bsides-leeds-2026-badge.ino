@@ -129,8 +129,8 @@ void setupTouchButtons()
   for (uint8_t buttonIndex = 0; buttonIndex < NUM_TOUCH_BUTTONS; ++buttonIndex) {
     const uint8_t result = ptc_add_selfcap_node(
       &touchButtons[buttonIndex],
-      0,
-      TOUCH_BUTTON_PINS[buttonIndex] // Assuming the pins are directly usable
+      1 << TOUCH_BUTTON_PINS[buttonIndex], // Correctly map to PTC channel
+      TOUCH_BUTTON_PINS[buttonIndex]
     );
 
     if (result != PTC_LIB_SUCCESS) {
