@@ -1108,7 +1108,7 @@ uint8_t policeMode(uint16_t step)
   return 100;
 }
 
-  const uint8_t INFINITI_LEDS[] PROGMEM = {
+const uint8_t INFINITI_LEDS[] PROGMEM = {
    7, 8, 0, 1, 2, 3, 4, 5, 6, 10, 9, 17, 16, 15, 14, 13, 12, 11,
 };
 
