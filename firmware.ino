@@ -1086,10 +1086,10 @@ uint8_t knightRider(uint16_t step)
   const uint8_t secondLed = pgm_read_byte(&KNIGHT_RIDER_LEDS[tableIndex + 1]);
 
   setAllLeds(COLOR_OFF);
-  ledStrip.setPixelColor(firstLed, 30, 0, 0); // Red color
+  ledStrip.setPixelColor(firstLed, 30, 0, 0); // Ensure Red color
 
   if (secondLed != 255) {
-    ledStrip.setPixelColor(secondLed, 30, 0, 0); // Red color
+    ledStrip.setPixelColor(secondLed, 30, 0, 0); // Ensure Red color
   }
 
   ledStrip.show();
@@ -1373,7 +1373,7 @@ void loop()
   enableRtcPtc();
 
   uint16_t animationStep = 0;
-  uint8_t animationMode = 5;
+  uint8_t animationMode = 0; // Set to Knight Rider mode
   uint32_t totalIntervalMs = 0;
 
   while (true) {
