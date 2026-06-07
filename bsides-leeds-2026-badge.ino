@@ -3,6 +3,7 @@
 #include <avr/pgmspace.h>
 #include <EEPROM.h>
 
+// Ensure the libraries are correctly included for the components
 #include <ptc_touch.h>
 #include <tinyNeoPixel_Static.h>
 
@@ -48,6 +49,7 @@ static const RgbColor COLOR_GREEN = {0, 30, 0};
 static const RgbColor COLOR_BLUE = {0, 0, 30};
 static const RgbColor COLOR_ORANGE = {30, 12, 0};
 
+// Ensure the touch button pins are correctly configured
 static const uint8_t TOUCH_BUTTON_PINS[NUM_TOUCH_BUTTONS] = {
   PIN_PA4,
   PIN_PA5,
