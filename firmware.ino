@@ -1074,7 +1074,7 @@ const uint8_t KNIGHT_RIDER_LEDS[] PROGMEM = {
   15, 255,
 };
 
-uint8_t knightRider(uint16_t step, uint8_t red, uint8_t green, uint8_t blue)
+uint8_t knightRider(uint16_t step)
 {
   uint8_t position = step % 20;
   if (position > 10) {
@@ -1086,10 +1086,10 @@ uint8_t knightRider(uint16_t step, uint8_t red, uint8_t green, uint8_t blue)
   const uint8_t secondLed = pgm_read_byte(&KNIGHT_RIDER_LEDS[tableIndex + 1]);
 
   setAllLeds(COLOR_OFF);
-  ledStrip.setPixelColor(firstLed, red, green, blue);
+  ledStrip.setPixelColor(firstLed, 30, 0, 0); // Red color
 
   if (secondLed != 255) {
-    ledStrip.setPixelColor(secondLed, red, green, blue);
+    ledStrip.setPixelColor(secondLed, 30, 0, 0); // Red color
   }
 
   ledStrip.show();
@@ -1267,7 +1267,7 @@ int runAnimationMode(uint8_t mode, uint16_t step)
 {
   switch (mode) {
     case 0:
-      return knightRider(step, 0, 10, 0);
+      return knightRider(step);
     case 1:
       return breath(step, 1, 0 , 0);
     case 2:
