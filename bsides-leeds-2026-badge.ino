@@ -1,5 +1,4 @@
 #include <avr/io.h>
-#include <SD.h>
 #include <avr/sleep.h>
 #include <avr/pgmspace.h>
 #include <EEPROM.h>
@@ -1325,28 +1324,7 @@ void ptc_event_callback(ptc_cb_event_t eventType, cap_sensor_t* node) {
     }
 }
 
-void readBOM() {
-  if (!SD.begin(4)) {
-    Serial.println("Initialization failed!");
-    return;
-  }
-  File bomFile = SD.open("BOM.csv");
-  if (bomFile) {
-    while (bomFile.available()) {
-      Serial.write(bomFile.read());
-    }
-    bomFile.close();
-  } else {
-    Serial.println("Error opening BOM.csv");
-  }
-}
-
 void setup() {
-  Serial.begin(9600);
-  while (!Serial) {
-    ; // Wait for serial port to connect. Needed for native USB port only
-  }
-  readBOM();
   pinMode(PIN_PA1, OUTPUT);
   pinMode(PIN_PA2, OUTPUT);
   pinMode(PIN_PB2, OUTPUT);
