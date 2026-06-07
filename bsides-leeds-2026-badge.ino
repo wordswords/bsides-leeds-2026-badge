@@ -1307,14 +1307,10 @@ void handleWakeButtonPress(
 )
 {
   if (heldMs > LONG_PRESS_THRESHOLD_MS) {
-    setAllLeds(COLOR_RED, true);
-    waitForWakeButtonReleased();
-
-    for (uint8_t cycle = 0; cycle < SLEEP_DEBOUNCE_CYCLES; ++cycle) {
-      miniSleep();
+    // Pause animation during long press
+    while (digitalRead(WAKE_BUTTON_PIN) == LOW) {
+      delay(5);
     }
-
-    enterSleep();
   } else {
     const uint8_t pressedMask = getPressedTouchMask();
     waitForAllTouchPadsReleased();
@@ -1323,28 +1319,9 @@ void handleWakeButtonPress(
       seedGameRandom();
     }
 
-    switch (pressedMask) {
-      case 0:
-        ++animationMode;
-        break;
-      case LEFT_BLUE_MASK:
-        playStopTheLight();
-        break;
-      case LEFT_RED_MASK:
-        playFindTheSequence();
-        break;
-      case LEFT_GREEN_MASK:
-        playFollowTheSequence();
-        break;
-      case RIGHT_BLUE_MASK:
-        playStopTheLightTwoPlayer();
-        break;
-      case RIGHT_RED_MASK:
-        playFindTheSequenceTwoPlayer();
-        break;
-      case RIGHT_GREEN_MASK:
-        playFollowTheSequenceTwoPlayer();
-        break;
+    // Disable cycling through animation modes on short press
+    if (pressedMask != 0) {
+      seedGameRandom();
     }
   }
 
