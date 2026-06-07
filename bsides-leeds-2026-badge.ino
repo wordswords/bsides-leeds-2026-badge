@@ -71,12 +71,6 @@ void seedGameRandom() {
         randomState = 0xACE1u;
     }
 }
-void setup() {
-  randomState ^= (uint16_t)millis();
-  if (randomState == 0) {
-    randomState = 0xACE1u;
-  }
-}
 
 uint8_t nextRandomByte()
 {
