@@ -6,6 +6,9 @@
 #include <ptc_touch.h>
 #include <tinyNeoPixel_Static.h>
 
+// Declare the callback function as expected by the library
+extern "C" void ptc_event_callback(uint8_t event, uint8_t node, uint8_t data);
+
 static const uint8_t WAKE_BUTTON_PIN = PIN_PA3;
 static const uint8_t LED_DATA_PIN = PIN_PB3;
 static const uint8_t LED_POWER_PIN = PIN_PB2;
