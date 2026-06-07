@@ -137,7 +137,7 @@ void setupTouchButtons()
       while (true) { }
     }
 
-    ptc_node_set_gain(&touchButtons[buttonIndex], 1); // Assuming a gain value of 1
+    ptc_node_set_gain(&touchButtons[buttonIndex], 1, 1); // Assuming analog and digital gain values of 1
     ptc_node_set_prescaler(&touchButtons[buttonIndex], PTC_PRESC_DIV4_gc);
     // Assuming oversampling is not needed or handled differently
     ptc_node_set_thresholds(&touchButtons[buttonIndex], 80, 10);
