@@ -3,7 +3,7 @@
 #include <avr/pgmspace.h>
 #include <EEPROM.h>
 
-#include <ptc.h>
+#include <ptc_touch.h>
 #include <tinyNeoPixel_Static.h>
 
 static const uint8_t WAKE_BUTTON_PIN = PIN_PA3;
