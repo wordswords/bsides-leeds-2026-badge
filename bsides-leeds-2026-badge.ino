@@ -66,7 +66,7 @@ uint8_t state;
 uint16_t randomState = 0xACE1u;
 
 void seedGameRandom()
-{
+void setup() {
   randomState ^= (uint16_t)millis();
   if (randomState == 0) {
     randomState = 0xACE1u;
