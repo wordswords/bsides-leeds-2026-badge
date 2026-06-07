@@ -1306,27 +1306,12 @@ void handleWakeButtonPress(
   uint32_t &totalIntervalMs
 )
 {
+  // Pause animation during long press
   if (heldMs > LONG_PRESS_THRESHOLD_MS) {
-    // Pause animation during long press
     while (digitalRead(WAKE_BUTTON_PIN) == LOW) {
       delay(5);
     }
-  } else {
-    const uint8_t pressedMask = getPressedTouchMask();
-    waitForAllTouchPadsReleased();
-
-    if (pressedMask != 0) {
-      seedGameRandom();
-    }
-
-    // Disable cycling through animation modes on short press
-    if (pressedMask != 0) {
-      seedGameRandom();
-    }
   }
-
-  animationStep = 0;
-  totalIntervalMs = 0;
 }
 
 void ptc_event_callback(ptc_cb_event_t eventType, cap_sensor_t* node) {
@@ -1361,7 +1346,7 @@ void loop()
   enableRtcPtc();
 
   uint16_t animationStep = 0;
-  uint8_t animationMode = 0; // Set to Knight Rider mode
+  uint8_t animationMode = 0; // Ensure Knight Rider mode
   uint32_t totalIntervalMs = 0;
 
   while (true) {
