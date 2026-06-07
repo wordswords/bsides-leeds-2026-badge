@@ -4,8 +4,7 @@ set -x
 set -e
 
 arduino-cli config init
-arduino-cli config set board_manager.additional_urls
-https://drazzy.com/package_drazzy.com_index.json
+arduino-cli config set board_manager.additional_urls https://drazzy.com/package_drazzy.com_index.json
 arduino-cli core update-index
 arduino-cli core install megaTinyCore:megaavr
 
