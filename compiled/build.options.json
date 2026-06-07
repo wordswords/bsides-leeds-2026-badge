@@ -1,0 +1,9 @@
+{
+  "additionalFiles": "../..",
+  "compiler.optimization_flags": "",
+  "customBuildProperties": "",
+  "fqbn": "megaTinyCore:megaavr:atxy6:chip=1616,clock=20internal,bodvoltage=1v8,bodmode=disabled,eesave=enable,millis=enabled,resetpin=UPDI,startuptime=8,wiremode=mors,printf=default,PWMmux=A_default,attach=allenabled,WDTtimeout=disabled,WDTwindow=disabled",
+  "hardwareFolders": "/home/david/.arduino15/packages/megaTinyCore/hardware/megaavr/2.6.11,/home/david/.arduino15/packages/megaTinyCore/hardware/megaavr/2.6.11",
+  "otherLibrariesFolders": "/home/david/Arduino/libraries",
+  "sketchLocation": "/home/david/firmware"
+}
