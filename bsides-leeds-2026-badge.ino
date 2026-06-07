@@ -14,6 +14,7 @@ static const uint8_t WAKE_BUTTON_PIN = PIN_PA3;
 static const uint8_t LED_DATA_PIN = PIN_PB3;
 static const uint8_t LED_POWER_PIN = PIN_PB2;
 
+// Ensure the number of LEDs and touch buttons match the BOM
 static const uint8_t NUM_LEDS = 18;
 static const uint8_t LEDS_PER_EYE = 9;
 static const uint8_t NUM_TOUCH_BUTTONS = 6;
