@@ -1,15 +1,10 @@
 # bsides-leeds-2026-badge
-The Artie the Owl badge for BSIDES Leeds 2026!
 
-Full details coming after the con! For now, take a look at the firmware for clues.
+My best attempt at a custom badge firmware that just runs a knightrider style red LED animation on loop with a minimal 'pause animation' option - there should be no way to give access to any of the games or other 'stuff' that I don't particularly want.
 
-If you fork this repo and modify the firmware, we'll flash it to your badge on the day! Never done Arduino / Cpp code before? That's what ChatGPT is for...
+I attempted to compile and test it against an arduino stack that I have derrived from BOM.csv.. it may not work on the real hardware! But I hope so :)
 
-We've included the firmware in firmware.ino, and also the compiled firmware in the compiled folder. Some of this firmware is pretty and some is ugly. 
+This was all vibe-coded like is all the rage with the kids these days, with aider, ChatGPT and Perplexity.
 
-This is the first bit of firmware where we've used AI to try and reduce flash footprint. It's always a battle with these badges to keep the flash footprint down, and in this case we have 8192KB of space available. As with all AI work, it's hard to stop it going off-piste. Some of the random functions are a bit heavy handed, but it was worth it to reduce the footprint and get all 6 games on the badge.
-
-We've also included the BOM.csv, which tells you the parts used to build the badge. This may help you (or the AI) understand what you've got to work with. Mainly the LEDs (individually addressible) and microcontroller (ATTINY814).
-
-This badge stands on the back of the fantastic work done by [MegaTinyCore](https://github.com/SpenceKonde/megaTinyCore). Without this, this firmware would be harder to read and the PTC library has been amazing to use.
+The game code and extra fluff is still left in firmware source file because I'm simply lazy, it could be stripped out for sure.
 
