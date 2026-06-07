@@ -1,3 +1,5 @@
+#include <Arduino.h>
+#line 1 "/home/david/firmware/firmware.ino"
 #include <avr/io.h>
 #include <avr/sleep.h>
 #include <avr/pgmspace.h>
@@ -71,6 +73,135 @@ uint8_t state;
 
 uint16_t randomState = 0xACE1u;
 
+#line 74 "/home/david/firmware/firmware.ino"
+void seedGameRandom();
+#line 81 "/home/david/firmware/firmware.ino"
+uint8_t nextRandomByte();
+#line 93 "/home/david/firmware/firmware.ino"
+uint8_t randomColorIndex();
+#line 103 "/home/david/firmware/firmware.ino"
+uint8_t randomLedIndex();
+#line 113 "/home/david/firmware/firmware.ino"
+uint8_t randomEight();
+#line 119 "/home/david/firmware/firmware.ino"
+uint8_t getPressedTouchMask();
+#line 132 "/home/david/firmware/firmware.ino"
+void setupTouchButtons();
+#line 168 "/home/david/firmware/firmware.ino"
+void setTouchButtonPins(uint8_t mode);
+#line 175 "/home/david/firmware/firmware.ino"
+void disableRtc();
+#line 188 "/home/david/firmware/firmware.ino"
+void initRtc();
+#line 197 "/home/david/firmware/firmware.ino"
+void enableRebootOnButton();
+#line 203 "/home/david/firmware/firmware.ino"
+void disableRebootOnButton();
+#line 221 "/home/david/firmware/firmware.ino"
+void enterSleep();
+#line 258 "/home/david/firmware/firmware.ino"
+uint16_t measureWakeButtonLowTime(uint16_t maxMs);
+#line 279 "/home/david/firmware/firmware.ino"
+uint8_t loopingEyes(uint16_t step, uint8_t red, uint8_t green, uint8_t blue);
+#line 298 "/home/david/firmware/firmware.ino"
+void setRightEye(uint8_t red, uint8_t green, uint8_t blue);
+#line 303 "/home/david/firmware/firmware.ino"
+void setRightEyeLed(uint8_t ledIndex, uint8_t red, uint8_t green, uint8_t blue);
+#line 308 "/home/david/firmware/firmware.ino"
+void showTouchedPads();
+#line 331 "/home/david/firmware/firmware.ino"
+void flashNotification(RgbColor color);
+#line 343 "/home/david/firmware/firmware.ino"
+void showFailure();
+#line 348 "/home/david/firmware/firmware.ino"
+void showSuccess();
+#line 357 "/home/david/firmware/firmware.ino"
+bool isAnyPadPressed();
+#line 362 "/home/david/firmware/firmware.ino"
+void waitForAllTouchPadsReleased();
+#line 369 "/home/david/firmware/firmware.ino"
+void waitForWakeButtonReleased();
+#line 382 "/home/david/firmware/firmware.ino"
+RgbColor colorForIndex(uint8_t colorIndex);
+#line 396 "/home/david/firmware/firmware.ino"
+uint8_t playerMask(uint8_t player);
+#line 401 "/home/david/firmware/firmware.ino"
+void setPlayerEye(uint8_t player, RgbColor color);
+#line 411 "/home/david/firmware/firmware.ino"
+void setPlayerEyeLed(uint8_t player, uint8_t ledIndex, RgbColor color);
+#line 432 "/home/david/firmware/firmware.ino"
+void showTwoPlayerResult(uint8_t leftScore, uint8_t rightScore);
+#line 452 "/home/david/firmware/firmware.ino"
+bool playStopTheLightLevel(uint8_t iterationIntervalMs);
+#line 481 "/home/david/firmware/firmware.ino"
+bool playStopTheLight();
+#line 502 "/home/david/firmware/firmware.ino"
+void showStopTheLightTwoPlayerFrame(uint8_t targetLed, uint8_t runnerLed, bool showLeft, bool showRight);
+#line 519 "/home/david/firmware/firmware.ino"
+void playStopTheLightTwoPlayerLevel( uint8_t iterationIntervalMs, bool leftActive, bool rightActive, bool &leftPassed, bool &rightPassed );
+#line 572 "/home/david/firmware/firmware.ino"
+bool playStopTheLightTwoPlayer();
+#line 622 "/home/david/firmware/firmware.ino"
+bool isExpectedSequenceButton(uint8_t expectedColor, uint8_t pressedMask);
+#line 636 "/home/david/firmware/firmware.ino"
+void showSequenceColor(uint8_t colorIndex);
+#line 641 "/home/david/firmware/firmware.ino"
+void showSequenceColorForPlayer(uint8_t player, uint8_t colorIndex);
+#line 650 "/home/david/firmware/firmware.ino"
+void createRandomSequence(uint8_t sequence[], uint8_t sequenceLength);
+#line 657 "/home/david/firmware/firmware.ino"
+bool sequencesMatch(const uint8_t firstSequence[], const uint8_t secondSequence[], uint8_t sequenceLength);
+#line 668 "/home/david/firmware/firmware.ino"
+void createDifferentRandomSequence( const uint8_t existingSequence[], uint8_t newSequence[], uint8_t sequenceLength );
+#line 683 "/home/david/firmware/firmware.ino"
+bool playFollowTheSequence();
+#line 729 "/home/david/firmware/firmware.ino"
+bool pressedMaskToColorIndex(uint8_t pressedMask, uint8_t &colorIndex);
+#line 749 "/home/david/firmware/firmware.ino"
+bool pressedMaskToPlayerColorIndex(uint8_t pressedMask, uint8_t player, uint8_t &colorIndex);
+#line 784 "/home/david/firmware/firmware.ino"
+bool waitForPlayerColorGuess(uint8_t player, uint8_t &colorIndex);
+#line 813 "/home/david/firmware/firmware.ino"
+bool playFollowTheSequenceLevelForPlayer(uint8_t player, const uint8_t sequence[], uint8_t level);
+#line 839 "/home/david/firmware/firmware.ino"
+bool playFollowTheSequenceTwoPlayer();
+#line 887 "/home/david/firmware/firmware.ino"
+void setSequenceSlotColor(uint8_t slotIndex, uint8_t colorIndex);
+#line 893 "/home/david/firmware/firmware.ino"
+void setPlayerSequenceSlotColor(uint8_t player, uint8_t slotIndex, uint8_t colorIndex);
+#line 898 "/home/david/firmware/firmware.ino"
+void showFindSequenceProgress(const uint8_t sequence[], uint8_t foundLength);
+#line 909 "/home/david/firmware/firmware.ino"
+void showFindSequenceProgressForPlayer(uint8_t player, const uint8_t sequence[], uint8_t foundLength);
+#line 920 "/home/david/firmware/firmware.ino"
+void showFindSequencePreview(const uint8_t sequence[]);
+#line 933 "/home/david/firmware/firmware.ino"
+void showFindSequencePreviewForPlayer(uint8_t player, const uint8_t sequence[]);
+#line 949 "/home/david/firmware/firmware.ino"
+bool waitForColorGuess(uint8_t &colorIndex);
+#line 1039 "/home/david/firmware/firmware.ino"
+bool playFindTheSequenceTwoPlayer();
+#line 1082 "/home/david/firmware/firmware.ino"
+uint8_t knightRider(uint16_t step);
+#line 1104 "/home/david/firmware/firmware.ino"
+uint8_t policeMode(uint16_t step);
+#line 1120 "/home/david/firmware/firmware.ino"
+uint8_t devsecopsMode(uint16_t step);
+#line 1157 "/home/david/firmware/firmware.ino"
+uint8_t nuclearMode(uint16_t step, uint8_t spacing, uint8_t r, uint8_t g, uint8_t b, uint8_t r2, uint8_t g2, uint8_t b2, uint8_t ret );
+#line 1190 "/home/david/firmware/firmware.ino"
+uint8_t breath(uint16_t step, uint8_t r, uint8_t g, uint8_t b );
+#line 1205 "/home/david/firmware/firmware.ino"
+uint8_t timer(uint16_t step);
+#line 1271 "/home/david/firmware/firmware.ino"
+int runAnimationMode(uint8_t mode, uint16_t step);
+#line 1305 "/home/david/firmware/firmware.ino"
+void handleWakeButtonPress( uint16_t heldMs, uint8_t &animationMode, uint16_t &animationStep, uint32_t &totalIntervalMs );
+#line 1330 "/home/david/firmware/firmware.ino"
+void setup();
+#line 1346 "/home/david/firmware/firmware.ino"
+void loop();
+#line 74 "/home/david/firmware/firmware.ino"
 void seedGameRandom() {
     randomState ^= (uint16_t)millis();
     if (randomState == 0) {
@@ -1388,3 +1519,4 @@ void loop()
     }
   }
 }
+

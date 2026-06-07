@@ -1,0 +1,29 @@
+/home/david/firmware/compiled/core/Tone.cpp.o: \
+ /home/david/.arduino15/packages/megaTinyCore/hardware/megaavr/2.6.11/cores/megatinycore/Tone.cpp \
+ /home/david/.arduino15/packages/megaTinyCore/hardware/megaavr/2.6.11/cores/megatinycore/Arduino.h \
+ /home/david/.arduino15/packages/megaTinyCore/hardware/megaavr/2.6.11/cores/megatinycore/dirty_tricks.h \
+ /home/david/.arduino15/packages/megaTinyCore/hardware/megaavr/2.6.11/cores/megatinycore/api/ArduinoAPI.h \
+ /home/david/.arduino15/packages/megaTinyCore/hardware/megaavr/2.6.11/cores/megatinycore/api/Binary.h \
+ /home/david/.arduino15/packages/megaTinyCore/hardware/megaavr/2.6.11/cores/megatinycore/api/Client.h \
+ /home/david/.arduino15/packages/megaTinyCore/hardware/megaavr/2.6.11/cores/megatinycore/api/Stream.h \
+ /home/david/.arduino15/packages/megaTinyCore/hardware/megaavr/2.6.11/cores/megatinycore/api/Print.h \
+ /home/david/.arduino15/packages/megaTinyCore/hardware/megaavr/2.6.11/cores/megatinycore/api/String.h \
+ /home/david/.arduino15/packages/megaTinyCore/hardware/megaavr/2.6.11/cores/megatinycore/api/Printable.h \
+ /home/david/.arduino15/packages/megaTinyCore/hardware/megaavr/2.6.11/cores/megatinycore/api/IPAddress.h \
+ /home/david/.arduino15/packages/megaTinyCore/hardware/megaavr/2.6.11/cores/megatinycore/api/HardwareI2C.h \
+ /home/david/.arduino15/packages/megaTinyCore/hardware/megaavr/2.6.11/cores/megatinycore/api/HardwareSerial.h \
+ /home/david/.arduino15/packages/megaTinyCore/hardware/megaavr/2.6.11/cores/megatinycore/api/PluggableUSB.h \
+ /home/david/.arduino15/packages/megaTinyCore/hardware/megaavr/2.6.11/cores/megatinycore/api/USBAPI.h \
+ /home/david/.arduino15/packages/megaTinyCore/hardware/megaavr/2.6.11/cores/megatinycore/api/Server.h \
+ /home/david/.arduino15/packages/megaTinyCore/hardware/megaavr/2.6.11/cores/megatinycore/api/Udp.h \
+ /home/david/.arduino15/packages/megaTinyCore/hardware/megaavr/2.6.11/cores/megatinycore/api/WCharacter.h \
+ /home/david/.arduino15/packages/megaTinyCore/hardware/megaavr/2.6.11/cores/megatinycore/api/Common.h \
+ /home/david/.arduino15/packages/megaTinyCore/hardware/megaavr/2.6.11/cores/megatinycore/UART_constants.h \
+ /home/david/.arduino15/packages/megaTinyCore/hardware/megaavr/2.6.11/cores/megatinycore/core_devices.h \
+ /home/david/.arduino15/packages/megaTinyCore/hardware/megaavr/2.6.11/cores/megatinycore/core_parameters.h \
+ /home/david/.arduino15/packages/megaTinyCore/hardware/megaavr/2.6.11/cores/megatinycore/errata.h \
+ /home/david/.arduino15/packages/megaTinyCore/hardware/megaavr/2.6.11/variants/txy6/pins_arduino.h \
+ /home/david/.arduino15/packages/megaTinyCore/hardware/megaavr/2.6.11/cores/megatinycore/timers.h \
+ /home/david/.arduino15/packages/megaTinyCore/hardware/megaavr/2.6.11/cores/megatinycore/UART.h \
+ /home/david/.arduino15/packages/megaTinyCore/hardware/megaavr/2.6.11/cores/megatinycore/HardwareSerial.h \
+ /home/david/.arduino15/packages/megaTinyCore/hardware/megaavr/2.6.11/cores/megatinycore/UART_check_pins.h
