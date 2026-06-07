@@ -137,9 +137,9 @@ void setupTouchButtons()
       while (true) { }
     }
 
-    ptc_node_set_gain(&touchButtons[buttonIndex], PTC_GAIN_1);
+    ptc_node_set_gain(&touchButtons[buttonIndex], PTC_GAIN_1X_gc);
     ptc_node_set_prescaler(&touchButtons[buttonIndex], PTC_PRESC_DIV4_gc);
-    ptc_node_set_oversamples(&touchButtons[buttonIndex], 4);
+    // Assuming oversampling is not needed or handled differently
     ptc_node_set_thresholds(&touchButtons[buttonIndex], 80, 10);
   }
 }
@@ -1273,7 +1273,7 @@ int runAnimationMode(uint8_t mode, uint16_t step)
     case 2:
       return loopingEyes(step, 0, 0, 10);
     case 3:
-      return knightRider(step, 10, 0, 0);
+      return knightRider(step);
     case 4:
       return loopingEyes(step, 10, 0, 0);
     case 5:
