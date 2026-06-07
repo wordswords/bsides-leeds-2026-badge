@@ -1060,7 +1060,7 @@ bool playFindTheSequenceTwoPlayer()
   return leftScore != rightScore;
 }
 
-const uint8_t KNIGHT_RIDER_LEDS[] PROGMEM = {
+const uint8_t KNIGHT_RIDER_LEDS[] = {
   2, 255,
   1, 3,
   0, 4,
@@ -1108,7 +1108,7 @@ uint8_t policeMode(uint16_t step)
   return 100;
 }
 
-const uint8_t INFINITI_LEDS[] PROGMEM = {
+const uint8_t INFINITI_LEDS[] = {
    7, 8, 0, 1, 2, 3, 4, 5, 6, 10, 9, 17, 16, 15, 14, 13, 12, 11,
 };
 
@@ -1161,11 +1161,11 @@ uint8_t nuclearMode(uint16_t step, uint8_t spacing, uint8_t r, uint8_t g, uint8_
   return ret;
 }
 
-const uint8_t SPIN_LEDS_LEFT[] PROGMEM = {
+const uint8_t SPIN_LEDS_LEFT[] = {
     7, 8, 0, 1, 2, 3, 4, 5, 6, 
 };
 
-const uint8_t SPIN_LEDS_RIGHT[] PROGMEM = {
+const uint8_t SPIN_LEDS_RIGHT[] = {
   10, 9, 17, 16, 15, 14, 13, 12, 11,
 };
 
