@@ -7,7 +7,7 @@
 #include <tinyNeoPixel_Static.h>
 
 // Declare the callback function as expected by the library
-extern void ptc_event_callback(const ptc_cb_event_t eventType, cap_sensor_t* node);
+extern void ptc_event_callback(ptc_cb_event_t eventType, cap_sensor_t* node);
 
 static const uint8_t WAKE_BUTTON_PIN = PIN_PA3;
 static const uint8_t LED_DATA_PIN = PIN_PB3;
@@ -1352,7 +1352,7 @@ void handleWakeButtonPress(
   totalIntervalMs = 0;
 }
 
-void ptc_event_callback(const ptc_cb_event_t eventType, cap_sensor_t* node) {
+void ptc_event_callback(ptc_cb_event_t eventType, cap_sensor_t* node) {
     // Basic implementation for touch event handling
     // This can be expanded based on specific requirements
     if (eventType == PTC_CB_EVENT_TOUCH) {
